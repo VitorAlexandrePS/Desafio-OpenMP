@@ -1,0 +1,26 @@
+Saida do comando:  for t in 1 2 4 8; do OMP_NUM_THREADS=$t ./cv dados.txt; done
+Maquina: Dell, Windows (MinGW64), gcc -O2 -fopenmp
+
+Threads: 1
+Estatura (classe 8 cm): k=9  media=169.872  desvio=10.465  CV=6.16%  [paralelo: CV=6.16%]
+Peso     (classe 4 kg): k=19  media=69.780  desvio=12.004  CV=17.20%  [paralelo: CV=17.20%]
+N = 1000 (original): seq 2.97 us | par 7.87 us | speedup 0.38x
+N = 10000000 (replicado 10000x): seq 0.0383 s | par 0.0389 s | speedup 0.98x
+
+Threads: 2
+Estatura (classe 8 cm): k=9  media=169.872  desvio=10.465  CV=6.16%  [paralelo: CV=6.16%]
+Peso     (classe 4 kg): k=19  media=69.780  desvio=12.004  CV=17.20%  [paralelo: CV=17.20%]
+N = 1000 (original): seq 2.95 us | par 172.64 us | speedup 0.02x
+N = 10000000 (replicado 10000x): seq 0.0353 s | par 0.0257 s | speedup 1.37x
+
+Threads: 4
+Estatura (classe 8 cm): k=9  media=169.872  desvio=10.465  CV=6.16%  [paralelo: CV=6.16%]
+Peso     (classe 4 kg): k=19  media=69.780  desvio=12.004  CV=17.20%  [paralelo: CV=17.20%]
+N = 1000 (original): seq 3.00 us | par 391.80 us | speedup 0.01x
+N = 10000000 (replicado 10000x): seq 0.0364 s | par 0.0160 s | speedup 2.27x
+
+Threads: 8
+Estatura (classe 8 cm): k=9  media=169.872  desvio=10.465  CV=6.16%  [paralelo: CV=6.16%]
+Peso     (classe 4 kg): k=19  media=69.780  desvio=12.004  CV=17.20%  [paralelo: CV=17.20%]
+N = 1000 (original): seq 3.34 us | par 840.70 us | speedup 0.00x
+N = 10000000 (replicado 10000x): seq 0.0393 s | par 0.0155 s | speedup 2.54x
